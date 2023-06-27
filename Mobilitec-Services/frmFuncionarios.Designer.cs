@@ -31,6 +31,7 @@ namespace Mobilitec_Services
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarios));
             this.gpbInfoFunc = new System.Windows.Forms.GroupBox();
+            this.btnTestarCEP = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblCadastrador = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,6 +80,7 @@ namespace Mobilitec_Services
             // 
             this.gpbInfoFunc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gpbInfoFunc.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gpbInfoFunc.Controls.Add(this.btnTestarCEP);
             this.gpbInfoFunc.Controls.Add(this.txtUsuario);
             this.gpbInfoFunc.Controls.Add(this.lblCadastrador);
             this.gpbInfoFunc.Controls.Add(this.label1);
@@ -117,12 +119,24 @@ namespace Mobilitec_Services
             this.gpbInfoFunc.TabStop = false;
             this.gpbInfoFunc.Text = "Informações do Funcionário";
             // 
+            // btnTestarCEP
+            // 
+            this.btnTestarCEP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTestarCEP.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnTestarCEP.Location = new System.Drawing.Point(401, 271);
+            this.btnTestarCEP.Name = "btnTestarCEP";
+            this.btnTestarCEP.Size = new System.Drawing.Size(102, 35);
+            this.btnTestarCEP.TabIndex = 9;
+            this.btnTestarCEP.Text = "Testar CEP";
+            this.btnTestarCEP.UseVisualStyleBackColor = false;
+            this.btnTestarCEP.Click += new System.EventHandler(this.btnTestarCEP_Click);
+            // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(618, 41);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 26);
-            this.txtUsuario.TabIndex = 29;
+            this.txtUsuario.TabIndex = 1;
             // 
             // lblCadastrador
             // 
@@ -148,7 +162,7 @@ namespace Mobilitec_Services
             this.btnApagar.Location = new System.Drawing.Point(710, 299);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(30, 30);
-            this.btnApagar.TabIndex = 26;
+            this.btnApagar.TabIndex = 15;
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
@@ -158,7 +172,7 @@ namespace Mobilitec_Services
             this.btnAdicionarImg.Location = new System.Drawing.Point(710, 254);
             this.btnAdicionarImg.Name = "btnAdicionarImg";
             this.btnAdicionarImg.Size = new System.Drawing.Size(30, 30);
-            this.btnAdicionarImg.TabIndex = 25;
+            this.btnAdicionarImg.TabIndex = 14;
             this.btnAdicionarImg.UseVisualStyleBackColor = true;
             this.btnAdicionarImg.Click += new System.EventHandler(this.btnAddImg_Click);
             // 
@@ -169,14 +183,14 @@ namespace Mobilitec_Services
             this.pcbFoto.Location = new System.Drawing.Point(531, 221);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(162, 204);
-            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 24;
             this.pcbFoto.TabStop = false;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(25, 337);
+            this.lblCidade.Location = new System.Drawing.Point(17, 357);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(59, 20);
             this.lblCidade.TabIndex = 23;
@@ -184,16 +198,16 @@ namespace Mobilitec_Services
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(89, 277);
+            this.txtBairro.Location = new System.Drawing.Point(83, 303);
             this.txtBairro.MaxLength = 100;
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(246, 26);
-            this.txtBairro.TabIndex = 10;
+            this.txtBairro.Size = new System.Drawing.Size(214, 26);
+            this.txtBairro.TabIndex = 11;
             // 
             // lblBairro
             // 
             this.lblBairro.AutoSize = true;
-            this.lblBairro.Location = new System.Drawing.Point(33, 279);
+            this.lblBairro.Location = new System.Drawing.Point(27, 305);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(51, 20);
             this.lblBairro.TabIndex = 22;
@@ -201,16 +215,16 @@ namespace Mobilitec_Services
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(415, 276);
+            this.txtNumero.Location = new System.Drawing.Point(90, 254);
             this.txtNumero.MaxLength = 10;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(85, 26);
-            this.txtNumero.TabIndex = 8;
+            this.txtNumero.TabIndex = 10;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(344, 279);
+            this.lblNumero.Location = new System.Drawing.Point(13, 257);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(65, 20);
             this.lblNumero.TabIndex = 20;
@@ -219,15 +233,15 @@ namespace Mobilitec_Services
             // cbbEstado
             // 
             this.cbbEstado.FormattingEnabled = true;
-            this.cbbEstado.Location = new System.Drawing.Point(92, 395);
+            this.cbbEstado.Location = new System.Drawing.Point(83, 412);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(122, 28);
-            this.cbbEstado.TabIndex = 12;
+            this.cbbEstado.TabIndex = 13;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(24, 395);
+            this.lblEstado.Location = new System.Drawing.Point(16, 415);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 20);
             this.lblEstado.TabIndex = 18;
@@ -235,25 +249,24 @@ namespace Mobilitec_Services
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(90, 336);
+            this.txtCidade.Location = new System.Drawing.Point(82, 356);
             this.txtCidade.MaxLength = 100;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(246, 26);
-            this.txtCidade.TabIndex = 11;
+            this.txtCidade.TabIndex = 12;
             // 
             // mkbCEP
             // 
-            this.mkbCEP.Location = new System.Drawing.Point(272, 395);
+            this.mkbCEP.Location = new System.Drawing.Point(417, 205);
             this.mkbCEP.Mask = "00000-000";
             this.mkbCEP.Name = "mkbCEP";
             this.mkbCEP.Size = new System.Drawing.Size(86, 26);
-            this.mkbCEP.TabIndex = 9;
-            this.mkbCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mkbCEP_KeyDown);
+            this.mkbCEP.TabIndex = 8;
             // 
             // lblCEP
             // 
             this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(224, 398);
+            this.lblCEP.Location = new System.Drawing.Point(370, 208);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(41, 20);
             this.lblCEP.TabIndex = 14;
@@ -261,16 +274,16 @@ namespace Mobilitec_Services
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(89, 218);
+            this.txtEndereco.Location = new System.Drawing.Point(90, 205);
             this.txtEndereco.MaxLength = 100;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(411, 26);
+            this.txtEndereco.Size = new System.Drawing.Size(248, 26);
             this.txtEndereco.TabIndex = 7;
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Location = new System.Drawing.Point(6, 221);
+            this.lblEndereco.Location = new System.Drawing.Point(7, 208);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
             this.lblEndereco.TabIndex = 12;
@@ -368,7 +381,7 @@ namespace Mobilitec_Services
             this.txtCodigo.MaxLength = 10;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 26);
-            this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TabIndex = 0;
             // 
             // lblCodigo
             // 
@@ -392,7 +405,7 @@ namespace Mobilitec_Services
             this.pnlMenu.Location = new System.Drawing.Point(4, 483);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(784, 90);
-            this.pnlMenu.TabIndex = 15;
+            this.pnlMenu.TabIndex = 16;
             // 
             // btnLimpar
             // 
@@ -402,7 +415,7 @@ namespace Mobilitec_Services
             this.btnLimpar.Location = new System.Drawing.Point(565, 15);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(100, 51);
-            this.btnLimpar.TabIndex = 19;
+            this.btnLimpar.TabIndex = 22;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -417,7 +430,7 @@ namespace Mobilitec_Services
             this.btnVoltar.Location = new System.Drawing.Point(675, 15);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(100, 51);
-            this.btnVoltar.TabIndex = 20;
+            this.btnVoltar.TabIndex = 23;
             this.btnVoltar.Text = "&Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -432,7 +445,7 @@ namespace Mobilitec_Services
             this.btnPesquisar.Location = new System.Drawing.Point(453, 15);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(100, 51);
-            this.btnPesquisar.TabIndex = 18;
+            this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -447,7 +460,7 @@ namespace Mobilitec_Services
             this.btnExcluir.Location = new System.Drawing.Point(343, 15);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(100, 51);
-            this.btnExcluir.TabIndex = 17;
+            this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -462,7 +475,7 @@ namespace Mobilitec_Services
             this.btnAlterar.Location = new System.Drawing.Point(231, 15);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(100, 51);
-            this.btnAlterar.TabIndex = 16;
+            this.btnAlterar.TabIndex = 19;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -477,7 +490,7 @@ namespace Mobilitec_Services
             this.btnCadastrar.Location = new System.Drawing.Point(119, 15);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(100, 51);
-            this.btnCadastrar.TabIndex = 15;
+            this.btnCadastrar.TabIndex = 18;
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -492,7 +505,7 @@ namespace Mobilitec_Services
             this.btnNovo.Location = new System.Drawing.Point(5, 15);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(100, 51);
-            this.btnNovo.TabIndex = 14;
+            this.btnNovo.TabIndex = 17;
             this.btnNovo.Text = "&Novo";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -512,7 +525,7 @@ namespace Mobilitec_Services
             this.Controls.Add(this.gpbInfoFunc);
             this.Controls.Add(this.pnlMenu);
             this.Name = "frmFuncionarios";
-            this.Text = "frmFuncioarios";
+            this.Text = "frmFuncionários";
             this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.gpbInfoFunc.ResumeLayout(false);
             this.gpbInfoFunc.PerformLayout();
@@ -564,5 +577,6 @@ namespace Mobilitec_Services
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblCadastrador;
+        private System.Windows.Forms.Button btnTestarCEP;
     }
 }

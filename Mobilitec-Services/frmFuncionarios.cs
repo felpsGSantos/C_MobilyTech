@@ -74,6 +74,7 @@ namespace Mobilitec_Services
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = false;
+            btnTestarCEP.Enabled = false;
         }
 
         //criando método para habilitarCamposNovo
@@ -100,6 +101,8 @@ namespace Mobilitec_Services
             btnLimpar.Enabled = true;
             btnNovo.Enabled = false;
             btnPesquisar.Enabled = true;
+            btnTestarCEP.Enabled = true;
+
         }
         public void habilitarCamposPesqu()
         {
@@ -308,14 +311,7 @@ namespace Mobilitec_Services
             cbbEstado.Text = endereco.uf;
             txtCidade.Text = endereco.cidade;
         }
-        private void mkbCEP_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                buscaCep(mkbCEP.Text);
-                txtNumero.Focus();
-            }
-        }
+
 
 
         public void pesquisaPorNomeFuncionario(string nome)
@@ -367,6 +363,24 @@ namespace Mobilitec_Services
             IntPtr hMenu = GetSystemMenu(this.Handle, false);
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
+        }
+
+        private void btnTestarCEP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                buscaCep(mkbCEP.Text);
+                txtNumero.Focus();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Número de CEP inválido", "Mensagem do Sistema",
+               MessageBoxButtons.OK, MessageBoxIcon.Error
+               );
+
+                mkbCEP.Focus();
+            }
         }
     }
 }
