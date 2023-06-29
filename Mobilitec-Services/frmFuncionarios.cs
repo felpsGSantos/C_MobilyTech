@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Mobilitec_Services
 {
@@ -138,7 +139,6 @@ namespace Mobilitec_Services
             txtCidade.Clear();
             cbbEstado.Items.Clear();
             cbbEstado.Text = "";
-            cbbSexo.Items.Clear();
             cbbSexo.Text = "";
             mkbCEP.Clear();
             mkbCPF.Clear();
@@ -188,26 +188,44 @@ namespace Mobilitec_Services
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Por favor, Insira um endereço de e-mail válido.", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
             if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("")
-                || txtNumero.Text.Equals("") || txtBairro.Text.Equals("") || txtCidade.Text.Equals("")
-                || mkbCPF.Text.Equals("   .   .   -") || mkbTelefone.Text.Equals("(  )      -")
-                || mkbCEP.Text.Equals("     -") || cbbEstado.Text.Equals("") || cbbSexo.Text.Equals(""))
+            || txtNumero.Text.Equals("") || txtBairro.Text.Equals("") || txtCidade.Text.Equals("")
+            || mkbCPF.Text.Equals("   .   .   -") || mkbTelefone.Text.Equals("(  )      -")
+            || mkbCEP.Text.Equals("     -") || cbbEstado.Text.Equals("") || cbbSexo.Text.Equals(""))
             {
                 MessageBox.Show("Não é permitido campo vazio", "Mensagem do Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Focus();
             }
-            else
-            {
-                //MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
-                //    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cdtFunc();
-                limparCampos();
-                desabilitarCampos();
-                btnNovo.Enabled = true;
 
-            }
+            MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
+           MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cdtFunc();
+            limparCampos();
+            desabilitarCampos();
+            btnNovo.Enabled = true;
+
+
         }
+
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+
+            return Regex.IsMatch(email, pattern);
+        }
+
+
+
+
+
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
