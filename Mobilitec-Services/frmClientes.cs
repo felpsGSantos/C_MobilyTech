@@ -180,7 +180,7 @@ namespace Mobilitec_Services
             comm.Connection = Connect.obterConexao();
             int res = comm.ExecuteNonQuery();
 
-            MessageBox.Show("Cadastro concluido com sucesso!!!");
+          
 
             Connect.fecharConexao();
 
@@ -197,16 +197,57 @@ namespace Mobilitec_Services
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Focus();
             }
+            else if(!IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("O formato do e-mail é inválido.", "Mensagem do sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+            }
             else
             {
-                MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cdtCli();
                 limparCampos();
                 desabilitarCampos();
                 btnNovo.Enabled = true;
-
             }
         }
+
+        private bool IsValidEmail(string email)
+
+        {
+            try
+            {
+               
+                
+
+                if (email.Contains("@") && email.Contains(".com"))
+                {
+                    int atIndex = email.IndexOf("@");
+
+                    int dotIndex = email.LastIndexOf(".com");
+
+                    if (atIndex < dotIndex)
+                    {
+                        if (dotIndex - atIndex > 1)
+                        {
+
+                        }
+                        
+                        
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+          
+        }
+
+     
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
