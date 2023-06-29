@@ -138,13 +138,13 @@ namespace Mobilitec_Services
             txtCidade.Clear();
             cbbEstado.Items.Clear();
             cbbEstado.Text = "";
-            cbbSexo.Items.Clear();
             cbbSexo.Text = "";
             mkbCEP.Clear();
             mkbCPF.Clear();
             mkbTelefone.Clear();
             txtNome.Focus();
         }
+
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -188,6 +188,14 @@ namespace Mobilitec_Services
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //Verificar se o campo de e-mail está vazio ou em um formato inválido
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Por favor, Insira um endereço de e-mail válido.", "Mensagem do Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return; //sai do método, pois a validação falhou
+            }
             if (txtNome.Text.Equals("") || txtEmail.Text.Equals("") || txtEndereco.Text.Equals("")
                 || txtNumero.Text.Equals("") || txtBairro.Text.Equals("") || txtCidade.Text.Equals("")
                 || mkbCPF.Text.Equals("   .   .   -") || mkbTelefone.Text.Equals("(  )      -")
@@ -196,56 +204,30 @@ namespace Mobilitec_Services
                 MessageBox.Show("Não é permitido campo vazio", "Mensagem do Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Focus();
+                return;
             }
-            else if(!IsValidEmail(txtEmail.Text))
-            {
-                MessageBox.Show("O formato do e-mail é inválido.", "Mensagem do sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus();
-            }
-            else
-            {
-                MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            
+            
+               MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
+                  MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cdtCli();
                 limparCampos();
                 desabilitarCampos();
                 btnNovo.Enabled = true;
-            }
+            
         }
-
+        // Função auxiliar para verificar se o e-mail é válido usando expressões regulares
         private bool IsValidEmail(string email)
-
         {
-            try
-            {
-               
-                
+            //Expressão regular para verificar o formato do e-mail
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
 
-                if (email.Contains("@") && email.Contains(".com"))
-                {
-                    int atIndex = email.IndexOf("@");
-
-                    int dotIndex = email.LastIndexOf(".com");
-
-                    if (atIndex < dotIndex)
-                    {
-                        if (dotIndex - atIndex > 1)
-                        {
-
-                        }
-                        
-                        
-                    }
-                }
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-          
+            //Verificar se o e-mail corresponde ao padrão
+            return Regex.IsMatch(email, pattern);
         }
+
+       
 
      
 
