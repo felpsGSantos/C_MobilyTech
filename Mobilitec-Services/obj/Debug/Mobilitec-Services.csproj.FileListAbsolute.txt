@@ -274,3 +274,4 @@ C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.CopyComplete
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.exe
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.pdb
+C:\Users\felipe.gsantos27\source\repos\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmControleDeAcesso.resources
