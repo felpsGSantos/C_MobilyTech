@@ -86,6 +86,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCadastrosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrosClientes.Designer.cs">
+      <DependentUpon>frmCadastrosClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClCadClientes.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -218,9 +225,13 @@
     <Compile Include="frmTestaBanco.Designer.cs">
       <DependentUpon>frmTestaBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opcoes.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastrosClientes.resx">
+      <DependentUpon>frmCadastrosClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastraPessoa.resx">
       <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
     </EmbeddedResource>

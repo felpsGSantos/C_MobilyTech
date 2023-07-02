@@ -31,12 +31,13 @@ namespace Mobilitec_Services
         {
             this.mspUsuarios = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaboradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mspUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // mspUsuarios
@@ -46,7 +47,7 @@ namespace Mobilitec_Services
             this.sairToolStripMenuItem});
             this.mspUsuarios.Location = new System.Drawing.Point(0, 0);
             this.mspUsuarios.Name = "mspUsuarios";
-            this.mspUsuarios.Size = new System.Drawing.Size(784, 24);
+            this.mspUsuarios.Size = new System.Drawing.Size(759, 24);
             this.mspUsuarios.TabIndex = 0;
             this.mspUsuarios.Text = "Menu de usuários";
             // 
@@ -60,46 +61,47 @@ namespace Mobilitec_Services
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.clientesToolStripMenuItem.Text = "Cadastro de Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // colaboradoresToolStripMenuItem
+            // 
+            this.colaboradoresToolStripMenuItem.Name = "colaboradoresToolStripMenuItem";
+            this.colaboradoresToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.colaboradoresToolStripMenuItem.Text = "Cadastro de Colaboradores";
+            // 
+            // administraçãoToolStripMenuItem
+            // 
+            this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
+            this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.administraçãoToolStripMenuItem.Text = "Administração";
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // clientesToolStripMenuItem
+            // dataGridView1
             // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // colaboradoresToolStripMenuItem
-            // 
-            this.colaboradoresToolStripMenuItem.Name = "colaboradoresToolStripMenuItem";
-            this.colaboradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.colaboradoresToolStripMenuItem.Text = "Colaboradores";
-            // 
-            // administraçãoToolStripMenuItem
-            // 
-            this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
-            this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.administraçãoToolStripMenuItem.Text = "Administração";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(295, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(758, 293);
+            this.dataGridView1.TabIndex = 2;
             // 
             // frmControleDeAcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(759, 561);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.mspUsuarios);
             this.MainMenuStrip = this.mspUsuarios;
             this.Name = "frmControleDeAcesso";
@@ -107,6 +109,7 @@ namespace Mobilitec_Services
             this.Text = "frmControleDeAcesso";
             this.mspUsuarios.ResumeLayout(false);
             this.mspUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,6 +123,6 @@ namespace Mobilitec_Services
         private System.Windows.Forms.ToolStripMenuItem colaboradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
