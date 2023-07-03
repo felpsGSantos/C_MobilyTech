@@ -16,7 +16,7 @@ namespace Mobilitec_Services
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmControleDeAcesso());
+            Application.Run(new frmCadastrosClientes());
         }
     }
 }

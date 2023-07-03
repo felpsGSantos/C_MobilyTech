@@ -124,6 +124,7 @@ namespace Mobilitec_Services
             btnExcluir.Enabled = true;
             btnLimpar.Enabled = true;
             btnNovo.Enabled = false;
+            btnTestarCEP.Enabled = true;
         }
 
         //criando o método limparCampos
@@ -339,6 +340,8 @@ namespace Mobilitec_Services
         {
             
         }
+
+       
 
         public void pesquisaPorNomeCliente(string nome)
         {

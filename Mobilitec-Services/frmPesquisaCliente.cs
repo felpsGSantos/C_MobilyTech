@@ -35,10 +35,10 @@ namespace Mobilitec_Services
             txtDescricao.Enabled = false;
         }
 
-        public void pqspCod(int codigoClicente)
+        public void pqspCod(int codigoCliente)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select*from tbclientes where codCli = " + codigoClicente + ";";
+            comm.CommandText = "select*from tbclientes where codCli = " + codigoCliente + ";";
             comm.CommandType = CommandType.Text;
             comm.Connection = Connect.obterConexao();
             MySqlDataReader DR;
