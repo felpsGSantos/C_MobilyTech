@@ -11,7 +11,7 @@ namespace Mobilitec_Services
     {
         private static string connString = "server=localhost;port=3306;database=dbmobiliteservice;uid=root;pwd=";
         private static MySqlConnection conn = null;
-        public static MySqlConnection obterConexao()
+        public static MySqlConnection obterConexao()    
         {
             conn = new MySqlConnection(connString);
             conn.Open();

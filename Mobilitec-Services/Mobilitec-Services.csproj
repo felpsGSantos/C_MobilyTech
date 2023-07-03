@@ -99,23 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCadastraPessoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadastraPessoa.Designer.cs">
       <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCalculadoraSimples.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCalculadoraSimples.Designer.cs">
-      <DependentUpon>frmCalculadoraSimples.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarregaDataGridDB.cs">
       <SubType>Form</SubType>
@@ -195,12 +183,6 @@
     <Compile Include="frmPesquisaFunc.Designer.cs">
       <DependentUpon>frmPesquisaFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSoma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSoma.Designer.cs">
-      <DependentUpon>frmSoma.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,9 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastraPessoa.resx">
       <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCalculadoraSimples.resx">
-      <DependentUpon>frmCalculadoraSimples.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarregaDataGridDB.resx">
       <DependentUpon>frmCarregaDataGridDB.cs</DependentUpon>
@@ -276,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisaFunc.resx">
       <DependentUpon>frmPesquisaFunc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSoma.resx">
-      <DependentUpon>frmSoma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>

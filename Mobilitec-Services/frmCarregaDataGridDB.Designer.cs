@@ -46,6 +46,7 @@ namespace Mobilitec_Services
             this.dgvFuncionarios.RowHeadersVisible = false;
             this.dgvFuncionarios.Size = new System.Drawing.Size(703, 358);
             this.dgvFuncionarios.TabIndex = 0;
+            this.dgvFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionarios_CellContentClick);
             // 
             // btnCarregaDados
             // 

@@ -47,11 +47,13 @@ namespace Mobilitec_Services
             dgvClientesCadastros.Columns["email"].HeaderText = "E-mail";
             dgvClientesCadastros.Columns["email"].Width = 380;
             dgvClientesCadastros.Columns["email"].ReadOnly = true;
+            dgvClientesCadastros.Columns["codCli"].Frozen = true;
+
 
 
         }
 
-       
+
 
         private void dgvClientesCadastros_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -70,6 +72,11 @@ namespace Mobilitec_Services
 
 
             }
+        }
+
+        private void dgvClientesCadastros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

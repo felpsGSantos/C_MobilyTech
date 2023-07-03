@@ -77,7 +77,7 @@ namespace Mobilitec_Services
             // administraçãoToolStripMenuItem
             // 
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
-            this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.administraçãoToolStripMenuItem.Text = "Administração";
             // 
             // sairToolStripMenuItem
@@ -90,6 +90,8 @@ namespace Mobilitec_Services
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 66);
             this.dataGridView1.Name = "dataGridView1";

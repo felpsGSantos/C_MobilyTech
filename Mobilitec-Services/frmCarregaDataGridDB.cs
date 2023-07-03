@@ -42,5 +42,10 @@ namespace Mobilitec_Services
         {
             dt.Rows.Clear();
         }
+
+        private void dgvFuncionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
