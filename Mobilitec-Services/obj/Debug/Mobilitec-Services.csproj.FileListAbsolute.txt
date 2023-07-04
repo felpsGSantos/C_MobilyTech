@@ -250,7 +250,6 @@ C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\bin
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.AssemblyReference.cache
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCadastraPessoa.resources
-C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCalculadoraSimples.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCarregaDataGridDB.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCdtUsu.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmClientes.resources
@@ -263,7 +262,6 @@ C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmMenuPrincipal.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmPesquisaCliente.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmPesquisaFunc.resources
-C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmSoma.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmSplash.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmStringFormat.resources
 C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmTabList.resources
@@ -328,3 +326,4 @@ C:\Users\douglas.cmarques\Desktop\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobi
 C:\Users\douglas.cmarques\Desktop\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.CopyComplete
 C:\Users\douglas.cmarques\Desktop\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.exe
 C:\Users\douglas.cmarques\Desktop\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec-Services.pdb
+C:\Users\felipe\Documents\Visual Studio 2019\C_MobilyTech\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCadastrosColaboradores.resources

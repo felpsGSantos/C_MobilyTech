@@ -73,10 +73,5 @@ namespace Mobilitec_Services
 
             }
         }
-
-        private void dgvClientesCadastros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

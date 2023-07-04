@@ -40,9 +40,12 @@ namespace Mobilitec_Services
             txtNome.Text = nome;
             habilitarCamposPesqu();
             pesquisaPorNomeCliente(txtNome.Text);
+            
             cbbSexo.Items.Add("Feminino");
             cbbSexo.Items.Add("Masculino");
         }
+
+        
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
@@ -341,7 +344,8 @@ namespace Mobilitec_Services
             
         }
 
-       
+
+ 
 
         public void pesquisaPorNomeCliente(string nome)
         {

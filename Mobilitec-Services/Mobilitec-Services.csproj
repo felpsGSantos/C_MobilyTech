@@ -86,6 +86,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClCadColaboradores.cs" />
     <Compile Include="frmCadastrosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +105,12 @@
     </Compile>
     <Compile Include="frmCadastraPessoa.Designer.cs">
       <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrosColaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrosColaboradores.Designer.cs">
+      <DependentUpon>frmCadastrosColaboradores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarregaDataGridDB.cs">
       <SubType>Form</SubType>
@@ -216,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastraPessoa.resx">
       <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrosColaboradores.resx">
+      <DependentUpon>frmCadastrosColaboradores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarregaDataGridDB.resx">
       <DependentUpon>frmCarregaDataGridDB.cs</DependentUpon>
